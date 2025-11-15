@@ -127,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
     accionesContainer.id = accionesContainerId;
     accionesContainer.style.textAlign = 'center';
     accionesContainer.style.marginTop = '12px';
-    // intentar insertar después del contenedor
     contenedor.parentNode.insertBefore(accionesContainer, contenedor.nextSibling);
   }
 
@@ -138,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
     vaciarBtn.textContent = 'Vaciar Carrito';
     accionesContainer.appendChild(vaciarBtn);
   } else {
-    // mover al contenedor de acciones si existe
     accionesContainer.appendChild(vaciarBtn);
   }
 
@@ -164,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function guardarCarrito(carrito) {
     localStorage.setItem('carrito', JSON.stringify(carrito));
-    renderizar(); // actualizar vista
+    renderizar();
   }
 
   
@@ -261,8 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.removeItem('carrito');
       alert('¡Compra realizada! Gracias por tu compra 🎉');
       renderizar();
-      // opcional: redirigir a página de gracias
-      // window.location.href = 'gracias.html';
+      
     }
   });
 
