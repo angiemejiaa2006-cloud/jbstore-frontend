@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     alert(`${productoObj.nombre} agregado al carrito 🛒`);
   }
 
-  // VARIABLES DEL MODAL
+  
   const modal = document.getElementById('modalProducto');
   const modalImagen = document.getElementById('modalImagen');
   const modalNombre = document.getElementById('modalNombre');
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const tallaSelect = document.getElementById('tallaSelect');
   const modalBtnAgregar = modal ? modal.querySelector('.btn-agregar') : null;
 
-  // ✅ Abrir modal al hacer clic en imagen o título
+  
   document.querySelectorAll('.producto img, .producto h3').forEach(elemento => {
     elemento.addEventListener('click', (e) => {
       const tarjeta = e.target.closest('.producto');
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const nombre = tarjeta.querySelector('h3')?.textContent.trim() || 'Producto';
       const precioText = tarjeta.querySelector('.precio')?.textContent || '';
 
-          // ✅ Mostrar tallas solo si la categoría es "ropa"
+          
     const contenedorTallas = document.getElementById('contenedorTallas');
     if (contenedorTallas) {
       if (categoriaId.trim().toLowerCase() === 'ropa') {
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-      // Llenar modal
+     
       modalImagen.src = imgSrc;
       modalNombre.textContent = nombre;
       modalPrecio.textContent = precioText;
@@ -53,21 +53,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Cerrar modal con X
+
   if (cerrar) {
     cerrar.addEventListener('click', () => {
       modal.style.display = 'none';
     });
   }
 
-  // Cerrar modal al hacer clic fuera
   window.addEventListener('click', (e) => {
     if (e.target === modal) {
       modal.style.display = 'none';
     }
   });
 
-  // ✅ Botón "Agregar al carrito" dentro del modal
+
   if (modalBtnAgregar) {
     modalBtnAgregar.addEventListener('click', () => {
       const nombre = modalNombre.textContent.trim();
@@ -81,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Botones agregar directo (sin abrir modal)
+  
   document.querySelectorAll('.producto .btn-agregar').forEach(boton => {
     boton.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -96,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Contador del carrito
+
   function actualizarContador() {
     const contador = document.getElementById('cart-count');
     if (!contador) return;
