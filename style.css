@@ -1,0 +1,280 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.hero {
+  height: 90vh;
+  background: url('../img/.jpg') no-repeat center/cover;
+}
+
+.category-card {
+  transition: 0.3s;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255,215,0,0.2);
+}
+
+h2, h5 {
+  color: #daa520;
+}
+
+.grid-productos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.producto {
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,);
+  padding: 15px;
+  width: 230px;
+  background-color: #fff; 
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: #d4af37; 
+}
+
+.producto:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.productos h3 {
+  font-size: 1.1em;
+  margin-bottom: 10px 0 5px;
+  color: #111;
+}
+
+.precio {
+    font-weight: bold;
+    color: #c4962c;
+    font-size: 1.1em;
+}
+
+.btn-agregar {
+    background-color: #f8c146;
+    border: none;
+    color: #111;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: backgroud-color 0.3s;
+}
+
+.btn-agregar:hover {
+    background-color: #e0aa2b;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  justify-items: center;
+}
+
+.galeria img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+  border: 2px solid #d4af37;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #d4af37;
+}
+
+.category-card {
+  border: none;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 3px solid #d4af37; 
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+.category-card .card-body {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #111;
+  border-top: 2px solid #d4af37;
+}
+
+.contenedor-productos {
+padding: 40px;
+background-color: #fff8f5;
+text-align: center;
+}
+
+.productos {
+margin-bottom: 50px;
+}
+
+.productos h2 {
+color: #4a3b2f;
+font-size: 26px;
+margin-bottom: 25px;
+border-bottom: 3px solid #fff8f5;
+display: inline-block;
+padding-bottom: 5px;
+}
+
+.grid-productos {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 25px;
+justify-items: center;
+}
+
+.producto {
+background-color: #fff;
+border: 2px solid #fff8f5;
+border-radius: 15px;
+padding: 15px;
+width: 220px;
+transition: all 0.3s ease;
+box-shadow: 0 4px 8px #d4af37;
+}
+
+.producto:hover {
+transform: translateY(-5px);
+box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.producto img {
+width: 100%;
+height: 230px;
+object-fit: cover;
+border-radius: 10px;
+}
+
+.producto h3 {
+margin: 10px 0 5px;
+font-size: 16px;
+color: #111;
+}
+
+.precio {
+font-weight: bold;
+color: #e69aa2;
+margin-bottom: 10px;
+}
+
+.btn-agregar {
+background-color: #f7c5cc;
+border: none;
+color: #4a3b2f;
+padding: 8px 15px;
+border-radius: 10px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.btn-agregar:hover {
+background-color: #f5a9b8;
+}
+
+#modalProducto {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#modalProducto .modal-contenido {
+  background: #111;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 350px; 
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 20px gold;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#modalProducto img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+#modalProducto h3 {
+  font-size: 1.4em;
+  margin: 15px 0 5px;
+}
+
+#modalProducto .precio {
+  font-size: 1.2em;
+  color: gold;
+  margin-bottom: 10px;
+}
+
+
+#tallaSelect {
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+#modalProducto .btn-agregar {
+  background-color: gold;
+  color: #111;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+#modalProducto .btn-agregar:hover {
+  background-color: #ffc107;
+}
+
+#modalProducto .cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: gold;
+}
