@@ -96,7 +96,7 @@
 
 <body>
 
-  <!-- NAVBAR -->
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 border-bottom border-warning">
     <div class="container">
       <a class="navbar-brand fw-bold fs-3 text-warning" href="index.html">JB STORE</a>
@@ -114,11 +114,11 @@
     </div>
   </nav>
 
-  <!-- SECCIÓN PRINCIPAL -->
+
   <section class="container text-center py-5">
     <h1 class="fw-bold mb-4">Nuestros Productos</h1>
 
-    <!-- BOTONES DE CATEGORÍA -->
+   
     <div class="mb-4">
       <button class="btn-categoria active" onclick="mostrarCategoria('ropa')">Ropa</button>
       <button class="btn-categoria" onclick="mostrarCategoria('perfumes')">Perfumes</button>
@@ -126,7 +126,7 @@
       <button class="btn-categoria" onclick="mostrarCategoria('gafas')">Gafas</button>
     </div>
 
-    <!-- CATEGORÍA ROPA -->
+    
     <div id="ropa" class="categoria">
       <div class="productos-grid">
         <div class="producto"><img src="img/ropa/1000343127.jpg" alt=""><h3>Camiseta Adidas Blanco Glam</h3><p class="precio">$120.000</p><button class="btn-agregar">Agregar al carrito</button></div>
@@ -141,7 +141,7 @@
       </div>
     </div>
 
-    <!-- CATEGORÍA PERFUMES -->
+ 
     <div id="perfumes" class="categoria" style="display:none;">
       <div class="productos-grid">
         <div class="producto"><img src="img/perfume/1000343136.jpg" alt=""><h3>Lattafa Honor & Glory 1.1</h3><p class="precio">$170.000</p><button class="btn-agregar">Agregar al carrito</button></div>
@@ -153,7 +153,7 @@
       </div>
     </div>
 
-    <!-- CATEGORÍA ACCESORIOS -->
+  
     <div id="accesorios" class="categoria" style="display:none;">
       <div class="productos-grid">
         <div class="producto"><img src="img/accesorios/1000343145.jpg" alt=""><h3>Reloj Rolex</h3><p class="precio">$180.000</p><button class="btn-agregar">Agregar al carrito</button></div>
@@ -167,7 +167,7 @@
       </div>
     </div>
 
-    <!-- CATEGORÍA GAFAS -->
+  
     <div id="gafas" class="categoria" style="display:none;">
       <div class="productos-grid">
         <div class="producto"><img src="img/gafas/1000343142.jpg" alt=""><h3>Gafas Ray-Ban clasicas</h3><p class="precio">$90.000</p><button class="btn-agregar">Agregar al carrito</button></div>
@@ -177,12 +177,12 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+
   <footer class="bg-black text-center text-warning py-3">
     <p class="mb-0">©️ 2025 JB STORE - Todos los derechos reservados</p>
   </footer>
 
-  <!-- 🖤 Modal Detalle de Producto -->
+
 <div id="modalProducto" class="modal">
   <div class="modal-contenido">
     <span class="cerrar">&times;</span>
@@ -203,14 +203,14 @@
       </select>
     </div>
 
-    <!-- 🔽 Este botón debe estar SIEMPRE fuera del div anterior -->
+    
     <button id="btnAgregarModal" class="btn-agregar">Agregar al carrito</button>
   </div>
 </div>
 
 
 
-<!-- SCRIPT -->
+
 <script>
   // Mostrar categoría
   function mostrarCategoria(categoria) {
