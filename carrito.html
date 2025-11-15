@@ -76,7 +76,7 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  
   <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 border-bottom border-warning">
     <div class="container">
       <a class="navbar-brand fw-bold fs-3 text-warning" href="index.html">JB STORE</a>
@@ -94,7 +94,7 @@
     </div>
   </nav>
 
-  <!-- CONTENIDO PRINCIPAL -->
+
   <section class="container py-5 text-center">
     <h1 class="fw-bold mb-4">Tu Carrito de Compras 🛒</h1>
 
@@ -105,7 +105,7 @@
     <div class="total" id="totalCarrito"></div>
   </section>
 
-  <!-- FOOTER -->
+  
   <footer>
     <p class="mb-0">©️ 2025 JB STORE - Todos los derechos reservados</p>
   </footer>
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const totalDiv = document.getElementById('totalCarrito') || document.getElementById('totalCarrito') || document.createElement('div');
   if (!contenedor) return;
 
-  // Botones globales: si existen en el HTML los usamos, si no los creamos
+
   let vaciarBtn = document.getElementById('vaciar-carrito');
   let comprarBtn = document.getElementById('comprar');
   const accionesContainerId = 'acciones-carrito';
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderizar(); // actualizar vista
   }
 
-  // Renderiza la tabla/interfaz del carrito
+  
   function renderizar() {
     const carrito = leerCarrito();
 
@@ -215,21 +215,21 @@ document.addEventListener('DOMContentLoaded', () => {
       tbody.appendChild(tr);
     });
 
-    // reemplazar contenido
+    
     contenedor.innerHTML = '';
     contenedor.appendChild(tabla);
 
-    // mostrar total
+    
     totalDiv.textContent = `Total: $${total.toLocaleString()}`;
     totalDiv.className = 'total';
 
-    // asegurarse que totalDiv esté visible (insertarlo si no está)
+    
     if (totalDiv.parentNode == null) {
       contenedor.parentNode.insertBefore(totalDiv, contenedor.nextSibling);
     }
   }
 
-  // Delegación de eventos para eliminar individual sin recargar
+
   contenedor.addEventListener('click', (e) => {
     if (e.target && e.target.classList.contains('btn-eliminar')) {
       const idx = parseInt(e.target.dataset.index, 10);
@@ -242,22 +242,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Vaciar carrito (botón global)
+ 
   vaciarBtn.addEventListener('click', () => {
     if (!confirm('¿Seguro que quieres vaciar el carrito?')) return;
     localStorage.removeItem('carrito');
     renderizar();
   });
 
-  // Finalizar compra (botón global) - ejemplo simple
+  
   comprarBtn.addEventListener('click', () => {
     const carrito = leerCarrito();
     if (!carrito || carrito.length === 0) {
       alert('Tu carrito está vacío.');
       return;
     }
-    // Aquí puedes integrar el proceso de pago / redirección a pasarela
-    // Por ahora simulamos la compra y limpiamos el carrito
+
     if (confirm('Confirmar compra. Esto vaciará el carrito.')) {
       localStorage.removeItem('carrito');
       alert('¡Compra realizada! Gracias por tu compra 🎉');
@@ -267,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Inicializar vista
+
   renderizar();
 });
 </script>
